@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="geometricPrecision">
+  <!--
+    PEAK DOWNLOAD — FAVICON v4
+    ───────────────────────────
+    Right triangle, inset 4px on all sides.
+    Bottom-left: (4, 28)  Bottom-right: (28, 28)  Top-left: (4, 4)
+    At 32px the datum line is subpixel noise — omit it. The shape is enough.
+  -->
+  <rect width="32" height="32" fill="#0C0C0C" rx="6"/>
+  <polygon points="4,4 4,28 28,28" fill="#F2F2F2"/>
+</svg>

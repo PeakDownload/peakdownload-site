@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" shape-rendering="geometricPrecision">
+  <!--
+    PEAK DOWNLOAD — ICON MARK v4
+    ──────────────────────────────
+    CONCEPT: A right triangle. The simplest geometric form of structured ascent.
+    - Bottom-left right angle: the foundation, the anchor, structural logic
+    - Vertical left edge: the measure, the axis
+    - Hypotenuse: the ascent line — controlled, not hype
+    - No bar charts. No data UI. No symmetry tricks.
+
+    The triangle sits on a precise grid. Its proportions are 1:√2 (not arbitrary).
+    Width = Height = 256px. Centered in 400px canvas with deliberate left gravity.
+
+    A single datum line (accent) cuts horizontally at 1/3 height from the base.
+    This is an engineering convention — a reference plane, not a decoration.
+
+    Colors:
+      Background: #0C0C0C
+      Triangle:   #F2F2F2  (off-white — not stark, reads as material)
+      Datum line: #4A7C9E  (steel blue — functional accent, cut into the form)
+
+    The datum line is rendered by cutting the accent color INTO the triangle
+    via a thin rectangle overlaid in the accent color. Width stops at the
+    hypotenuse at that exact y — making it feel structural, not applied.
+  -->
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0C0C0C" rx="72"/>
+
+  <!--
+    Triangle geometry:
+      Bottom-left:  (72, 312)
+      Bottom-right: (328, 312)
+      Top-left:     (72,  88)
+      This is a right triangle with the right angle at bottom-left.
+      Width = 256, Height = 224.
+
+    Datum line at 1/3 from bottom:
+      y_datum = 312 - (224 / 3) = 312 - 74.67 = 237.33 → y=237
+      At y=237, the hypotenuse x position:
+        Hypotenuse goes from (72, 88) to (328, 312).
+        Parametric: x = 72 + (328-72) * (y - 88) / (312 - 88)
+                      = 72 + 256 * (237 - 88) / 224
+                      = 72 + 256 * 149 / 224
+                      = 72 + 256 * 0.6652
+                      = 72 + 170.3 = 242.3 → x=242
+        So datum line: x=72 to x=242, y=237, height=3px
+  -->
+
+  <!-- Triangle — solid fill -->
+  <polygon points="72,88 72,312 328,312" fill="#F2F2F2"/>
+
+  <!-- Datum line — accent, precisely clipped to hypotenuse width -->
+  <rect x="72" y="237" width="170" height="3" fill="#4A7C9E"/>
+
+</svg>

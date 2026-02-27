@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" shape-rendering="geometricPrecision">
+  <!--
+    PEAK DOWNLOAD — 1024×1024 v4
+    ─────────────────────────────
+    Scale from 400px: factor = 1024/400 = 2.56
+    Icon triangle: (72,88) (72,312) (328,312) at 400px
+    Scaled: (184, 225) (184, 799) (839, 799)
+
+    Datum at y=237 in 400px → y = 237 × 2.56 = 607
+    Datum x_end = 242 × 2.56 = 620, x_start = 184
+    Width = 436, height = 8px
+  -->
+
+  <rect width="1024" height="1024" fill="#0C0C0C" rx="184"/>
+
+  <!-- Triangle -->
+  <polygon points="184,225 184,799 839,799" fill="#F2F2F2"/>
+
+  <!-- Datum line -->
+  <rect x="184" y="607" width="436" height="8" fill="#4A7C9E"/>
+
+</svg>
