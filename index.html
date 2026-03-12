@@ -1,79 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PeakDownload</title>
-  <meta name="description" content="PeakDownload builds focused software systems. Independent applications designed and operated with precision and long-term intent.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg">
+  <meta
+    name="description"
+    content="PeakDownload builds focused software platforms for competitive leagues, operational workflows, and specialized real-world systems."
+  />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg" />
 </head>
 <body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/" class="site-logo" aria-label="PeakDownload home">
+          <svg
+            class="site-logo__mark"
+            width="24"
+            height="21"
+            viewBox="0 0 24 21"
+            shape-rendering="geometricPrecision"
+            aria-hidden="true"
+          >
+            <polygon points="0,0 0,21 24,21" fill="#F4F7FB"></polygon>
+            <rect x="0" y="14" width="16" height="2" fill="#64B5FF"></rect>
+          </svg>
+          <span class="site-logo__name">PeakDownload</span>
+        </a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="/" class="site-logo">
-        <!-- Right triangle mark: bottom-left right angle, hypotenuse rising left to right -->
-        <svg class="site-logo__mark" width="24" height="21" viewBox="0 0 24 21" shape-rendering="geometricPrecision" aria-hidden="true">
-          <polygon points="0,0 0,21 24,21" fill="#F0F0F0"/>
-          <rect x="0" y="14" width="16" height="2" fill="#4A7C9E"/>
-        </svg>
-        <span class="site-logo__name">PeakDownload</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-      <nav class="site-nav">
-        <a href="/" class="active">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
 
-  <main>
-    <div class="container">
-
-      <div class="page-header">
-        <span class="eyebrow">Software operator</span>
-        <h1>PeakDownload builds focused software systems.</h1>
-        <p>We design and operate independent applications with precision and long-term intent.</p>
-      </div>
-
-      <hr class="rule">
-
-      <div class="section">
-        <span class="eyebrow">Projects</span>
-        <nav class="project-list" aria-label="Products">
-          <a href="/projects/bowling/" class="project-row">
-            <span class="project-row__name">Bowling League App</span>
-            <span class="project-row__desc">Turn league night into a live competitive experience.</span>
-            <span class="project-row__status">In Development</span>
-          </a>
-          <a href="/projects/homeops/" class="project-row">
-            <span class="project-row__name">HomeOps</span>
-            <span class="project-row__desc">Structured home system tracking and lifecycle management.</span>
-            <span class="project-row__status">In Development</span>
-          </a>
+        <nav class="site-nav">
+          <a href="/" class="active">Home</a>
+          <a href="/projects/">Products</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
         </nav>
       </div>
+    </header>
 
-    </div>
-  </main>
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <span class="eyebrow eyebrow--accent">Peak Download LLC</span>
+            <h1>Focused software platforms built for real-world competition and operations.</h1>
+            <p class="hero__lede">
+              PeakDownload designs and operates independent software products for competitive leagues,
+              structured workflows, and specialized systems that need to run reliably night after night.
+            </p>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <span class="site-footer__copy">PeakDownload &copy; 2026</span>
-      <div class="site-footer__links">
-        <a href="/projects/">Projects</a>
-        <a href="/privacy.html">Privacy</a>
+            <div class="hero__actions">
+              <a href="/projects/" class="button button--primary">Explore products</a>
+              <a href="mailto:contact@peakdownload.com" class="button button--secondary">Contact</a>
+            </div>
+
+            <div class="hero__stats" aria-label="Company highlights">
+              <div class="stat-card">
+                <span class="stat-card__label">Focus</span>
+                <strong class="stat-card__value">Independent products</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__label">Flagship</span>
+                <strong class="stat-card__value">League scoring platform</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__label">Approach</span>
+                <strong class="stat-card__value">Reliable by design</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__panel">
+            <div class="hero-card hero-card--glow">
+              <div class="hero-card__top">
+                <span class="pill">Featured product</span>
+                <span class="hero-card__status">In development</span>
+              </div>
+
+              <h2>Bowling League App</h2>
+              <p>
+                A live competition platform designed to turn league night into a modern scoring and standings
+                experience.
+              </p>
+
+              <div class="hero-metrics">
+                <div class="hero-metric">
+                  <span class="hero-metric__label">Experience</span>
+                  <span class="hero-metric__value">Live scoring</span>
+                </div>
+                <div class="hero-metric">
+                  <span class="hero-metric__label">Output</span>
+                  <span class="hero-metric__value">Automatic standings</span>
+                </div>
+                <div class="hero-metric">
+                  <span class="hero-metric__label">Audience</span>
+                  <span class="hero-metric__value">Leagues, captains, players</span>
+                </div>
+              </div>
+
+              <a href="/projects/bowling/" class="text-link">View product details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--blend">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What we build</span>
+            <h2>Software with a clear job to do.</h2>
+            <p>
+              We build products for situations where generic tools feel clumsy, disconnected, or hard to trust.
+              The goal is simple: sharper systems, cleaner workflows, better user experience.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-card__index">01</span>
+              <h3>Competitive platforms</h3>
+              <p>
+                Live scoring, standings, player participation, and league operations built around real competition.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">02</span>
+              <h3>Operational systems</h3>
+              <p>
+                Structured tools for recurring processes, lifecycle management, and decision support in everyday work.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">03</span>
+              <h3>Focused product design</h3>
+              <p>
+                Purpose-built applications with tighter workflows, stronger clarity, and less noise than broad platforms.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div>
+              <span class="eyebrow">Products</span>
+              <h2>Current product portfolio.</h2>
+            </div>
+            <p>
+              PeakDownload develops and operates independent software products under a single company and domain.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <a href="/projects/bowling/" class="product-card product-card--featured">
+              <div class="product-card__top">
+                <span class="pill pill--bright">Flagship</span>
+                <span class="product-card__status">In development</span>
+              </div>
+              <h3>Bowling League App</h3>
+              <p>
+                Turn league night into a live competitive experience with score entry, standings, roster workflows,
+                and a more modern league environment.
+              </p>
+              <ul class="product-tags">
+                <li>Live scoring</li>
+                <li>Standings</li>
+                <li>Captains & players</li>
+              </ul>
+            </a>
+
+            <a href="/projects/homeops/" class="product-card">
+              <div class="product-card__top">
+                <span class="pill">Product</span>
+                <span class="product-card__status">In development</span>
+              </div>
+              <h3>HomeOps</h3>
+              <p>
+                Structured home system tracking and lifecycle management for properties, maintenance, and household
+                operations.
+              </p>
+              <ul class="product-tags">
+                <li>Tracking</li>
+                <li>Lifecycle records</li>
+                <li>Organization</li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="company-panel">
+            <div class="company-panel__content">
+              <span class="eyebrow">Company</span>
+              <h2>Built and operated by Peak Download LLC.</h2>
+              <p>
+                PeakDownload is an independent software company building focused applications for specialized use
+                cases. The company operates under the PeakDownload domain and publishes its products directly.
+              </p>
+            </div>
+
+            <div class="company-panel__meta">
+              <div class="meta-row">
+                <span class="meta-row__label">Company</span>
+                <span class="meta-row__value">Peak Download LLC</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Website</span>
+                <span class="meta-row__value">peakdownload.com</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Contact</span>
+                <span class="meta-row__value">contact@peakdownload.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <div class="site-footer__brand">PeakDownload</div>
+          <div class="site-footer__copy">© 2026 Peak Download LLC. All rights reserved.</div>
+        </div>
+
+        <div class="site-footer__links">
+          <a href="/projects/">Products</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="/assets/js/main.js"></script>
 </body>

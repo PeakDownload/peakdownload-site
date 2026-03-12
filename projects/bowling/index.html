@@ -1,93 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bowling League App — PeakDownload</title>
-  <meta name="description" content="Live competitive scoring and league management for bowling centers. Built by PeakDownload.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg">
+  <meta
+    name="description"
+    content="A live competition platform for bowling leagues with score entry, standings, roster workflows, and a more modern league-night experience."
+  />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg" />
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="/" class="site-logo">
-        <svg class="site-logo__mark" width="24" height="21" viewBox="0 0 24 21" shape-rendering="geometricPrecision" aria-hidden="true">
-          <polygon points="0,0 0,21 24,21" fill="#F0F0F0"/>
-          <rect x="0" y="14" width="16" height="2" fill="#4A7C9E"/>
-        </svg>
-        <span class="site-logo__name">PeakDownload</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-      <nav class="site-nav">
-        <a href="/">Home</a>
-        <a href="/projects/" class="active">Projects</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-
-      <div class="page-header">
-        <a href="/projects/" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"/>
-            <polyline points="12 19 5 12 12 5"/>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/" class="site-logo" aria-label="PeakDownload home">
+          <svg
+            class="site-logo__mark"
+            width="24"
+            height="21"
+            viewBox="0 0 24 21"
+            shape-rendering="geometricPrecision"
+            aria-hidden="true"
+          >
+            <polygon points="0,0 0,21 24,21" fill="#F4F7FB"></polygon>
+            <rect x="0" y="14" width="16" height="2" fill="#64B5FF"></rect>
           </svg>
-          Projects
+          <span class="site-logo__name">PeakDownload</span>
         </a>
-        <span class="eyebrow">Product</span>
-        <h1>Bowling League App</h1>
-        <div class="product-meta">
-          <span class="product-meta__item">Vertical SaaS</span>
-          <span class="product-meta__sep"></span>
-          <span class="product-meta__item">Sports &amp; Recreation</span>
-          <span class="product-meta__sep"></span>
-          <span class="product-meta__item">In Development</span>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/projects/" class="active">Products</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <a href="/projects/" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Products
+          </a>
+
+          <span class="eyebrow eyebrow--accent">Flagship product</span>
+          <h1>Bowling League App</h1>
+
+          <p class="page-hero__lede">
+            A live competition platform designed to turn league night into a modern scoring,
+            standings, and player experience.
+          </p>
+
+          <div class="product-meta">
+            <span class="product-meta__item">League software</span>
+            <span class="product-meta__sep"></span>
+            <span class="product-meta__item">Live scoring</span>
+            <span class="product-meta__sep"></span>
+            <span class="product-meta__item">In development</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="company-panel">
+            <div class="company-panel__content">
+              <span class="eyebrow">Overview</span>
+              <h2>Built around the way real bowling leagues actually run.</h2>
+              <p>
+                Bowling leagues still rely heavily on paper score sheets, manual spreadsheet updates,
+                and disconnected communication between managers, captains, and players. That creates
+                extra admin work, delayed standings, and very little visibility for the people actually
+                participating each week.
+              </p>
+              <p>
+                The Bowling League App replaces that patchwork with one connected system for score entry,
+                standings, roster participation, league workflows, and a more engaging competitive
+                experience on league night.
+              </p>
+            </div>
+
+            <div class="company-panel__meta">
+              <div class="meta-row">
+                <span class="meta-row__label">Product</span>
+                <span class="meta-row__value">Bowling League App</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Publisher</span>
+                <span class="meta-row__value">Peak Download LLC</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Category</span>
+                <span class="meta-row__value">Sports league software</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Status</span>
+                <span class="meta-row__value">In development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--blend">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Core capabilities</span>
+            <h2>Designed for competition, not just administration.</h2>
+            <p>
+              The platform is being built to support league managers, captains, players, and centers
+              with a cleaner, faster, and more modern operational flow.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-card__index">01</span>
+              <h3>Live score entry</h3>
+              <p>
+                Enter match results as they happen and reduce the lag between league play and visible results.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">02</span>
+              <h3>Automatic standings</h3>
+              <p>
+                Convert completed match data into current team standings without spreadsheet reconciliation.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-card__index">03</span>
+              <h3>League workflows</h3>
+              <p>
+                Support managers, captains, and players with invites, roster participation, and structured league operations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div>
+              <span class="eyebrow">Product direction</span>
+              <h2>Turning league night into a live competitive experience.</h2>
+            </div>
+            <p>
+              The long-term goal is not just cleaner administration. It is to make league night feel more active,
+              transparent, and engaging for everyone involved.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card product-card--featured">
+              <div class="product-card__top">
+                <span class="pill pill--bright">League experience</span>
+                <span class="product-card__status">Primary focus</span>
+              </div>
+              <h3>For leagues and captains</h3>
+              <p>
+                Simplify score handling, reduce manual overhead, and create a clearer view of current match and season outcomes.
+              </p>
+              <ul class="product-tags">
+                <li>Match scoring</li>
+                <li>Standings</li>
+                <li>Team workflows</li>
+              </ul>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__top">
+                <span class="pill">Player value</span>
+                <span class="product-card__status">Planned</span>
+              </div>
+              <h3>For players and spectators</h3>
+              <p>
+                Create better visibility into current performance, standings movement, and the story of league night as it unfolds.
+              </p>
+              <ul class="product-tags">
+                <li>Visibility</li>
+                <li>Engagement</li>
+                <li>Modern experience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="company-panel">
+            <div class="company-panel__content">
+              <span class="eyebrow">Availability</span>
+              <h2>Published under PeakDownload.</h2>
+              <p>
+                The Bowling League App is an independent software product being developed and operated by
+                Peak Download LLC under the PeakDownload brand and domain.
+              </p>
+            </div>
+
+            <div class="company-panel__meta">
+              <div class="meta-row">
+                <span class="meta-row__label">Company</span>
+                <span class="meta-row__value">Peak Download LLC</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Website</span>
+                <span class="meta-row__value">peakdownload.com</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Privacy</span>
+                <span class="meta-row__value">
+                  <a href="/privacy-bowling.html">Bowling app privacy policy</a>
+                </span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Contact</span>
+                <span class="meta-row__value">contact@peakdownload.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" style="padding: 34px 0 0;">
+            <a href="/projects/" class="back-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Back to products
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <div class="site-footer__brand">PeakDownload</div>
+          <div class="site-footer__copy">© 2026 Peak Download LLC. All rights reserved.</div>
+        </div>
+
+        <div class="site-footer__links">
+          <a href="/projects/">Products</a>
+          <a href="/privacy-bowling.html">Bowling privacy</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
         </div>
       </div>
-
-      <hr class="rule">
-
-      <div class="product-body container--narrow">
-        <p>Bowling leagues run on paper score sheets, disconnected spreadsheets, and manual reconciliation. League secretaries spend hours on data entry. Players have no visibility into standings or history. Center operators cannot see their own business clearly.</p>
-        <p>The Bowling League App replaces that patchwork. One system for league scheduling, live scoring, player statistics, and center analytics — built around the actual workflows of bowling centers, not adapted from generic sports software.</p>
-        <p>Designed for real-time display on overhead monitors. Accessible to players and spectators from any device during league night.</p>
-      </div>
-
-      <hr class="rule">
-
-      <div class="section--tight">
-        <a href="/" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"/>
-            <polyline points="12 19 5 12 12 5"/>
-          </svg>
-          Back to PeakDownload
-        </a>
-      </div>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <span class="site-footer__copy">PeakDownload &copy; 2026</span>
-      <div class="site-footer__links">
-        <a href="/projects/">Projects</a>
-        <a href="/privacy.html">Privacy</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="/assets/js/main.js"></script>
 </body>
