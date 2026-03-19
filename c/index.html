@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captain Invite — LeagueCast</title>
+  <meta
+    name="description"
+    content="Open your LeagueCast captain invite, copy the invite code, and continue setup in the app."
+  />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/invite.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg" />
+</head>
+<body data-invite-role="captain">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/" class="site-logo" aria-label="PeakDownload home">
+          <svg
+            class="site-logo__mark"
+            width="24"
+            height="21"
+            viewBox="0 0 24 21"
+            shape-rendering="geometricPrecision"
+            aria-hidden="true"
+          >
+            <polygon points="0,0 0,21 24,21" fill="#F4F7FB"></polygon>
+            <rect x="0" y="14" width="16" height="2" fill="#64B5FF"></rect>
+          </svg>
+          <span class="site-logo__name">PeakDownload</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/projects/bowling/">LeagueCast</a>
+          <a href="/privacy-bowling.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--compact invite-hero">
+        <div class="container container--narrow">
+          <span class="eyebrow eyebrow--accent">LeagueCast invite</span>
+          <h1 id="invite-title">You’re invited to join as a captain.</h1>
+          <p class="page-hero__lede" id="invite-lede">
+            Open LeagueCast with this invite or enter the code manually in the app.
+          </p>
+          <div class="invite-hero__meta">
+            <span class="invite-meta-pill">Captain setup</span>
+            <span class="invite-meta-pill">Direct invite link</span>
+            <span class="invite-meta-pill" id="invite-code-pill">Code ready</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container container--narrow">
+          <div class="invite-panel-grid">
+            <article class="invite-code-card">
+              <span class="eyebrow">Invite code</span>
+              <h2 id="code-heading">Use this code in LeagueCast</h2>
+              <p id="code-copy">
+                If the app does not open automatically, copy this code and choose Join with Invite in LeagueCast.
+              </p>
+
+              <div class="invite-code-box" id="invite-code-display" aria-live="polite">—</div>
+
+              <div class="invite-actions">
+                <a class="button button--primary invite-action-button" id="open-app-button" href="#">
+                  Open LeagueCast
+                </a>
+                <button class="button button--secondary invite-action-button" id="copy-code-button" type="button">
+                  Copy invite code
+                </button>
+              </div>
+
+              <p class="invite-help-text" id="copy-feedback" aria-live="polite"></p>
+            </article>
+
+            <aside class="invite-side-stack">
+              <article class="invite-info-card">
+                <span class="eyebrow">How it works</span>
+                <div class="invite-steps">
+                  <div class="invite-step">
+                    <strong>1. Open the app</strong>
+                    <p>Use the Open LeagueCast button if the app is already installed.</p>
+                  </div>
+                  <div class="invite-step">
+                    <strong>2. Join with the code</strong>
+                    <p>LeagueCast will prefill the invite when possible. If not, enter the code manually.</p>
+                  </div>
+                  <div class="invite-step">
+                    <strong>3. Finish captain setup</strong>
+                    <p>Captains continue into team setup and league participation after claiming the invite.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="invite-info-card invite-info-card--soft" id="download-card">
+                <span class="eyebrow">Need the app first?</span>
+                <h3 id="download-title">LeagueCast download links will live here.</h3>
+                <p id="download-copy">
+                  Before launch, you can keep using this page as the fallback invite destination. When the app is live,
+                  plug the App Store and Play Store links into the config and this card becomes the install path.
+                </p>
+                <div class="invite-actions invite-actions--stacked" id="download-actions"></div>
+              </article>
+
+              <article class="invite-info-card invite-info-card--soft">
+                <span class="eyebrow">Need help?</span>
+                <p>
+                  If you received this invite from a commissioner and need help joining, keep the code handy and
+                  contact the sender or PeakDownload support.
+                </p>
+                <a class="text-link" href="mailto:contact@peakdownload.com?subject=LeagueCast%20Captain%20Invite%20Help">
+                  Contact support
+                </a>
+              </article>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <div class="site-footer__brand">PeakDownload</div>
+          <div class="site-footer__copy">© 2026 Peak Download LLC. All rights reserved.</div>
+        </div>
+
+        <div class="site-footer__links">
+          <a href="/projects/bowling/">LeagueCast</a>
+          <a href="/privacy-bowling.html">Privacy</a>
+          <a href="mailto:contact@peakdownload.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/invite-landing.js"></script>
+</body>
+</html>

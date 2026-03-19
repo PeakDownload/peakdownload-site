@@ -1,0 +1,2 @@
+/c/:code  /c/index.html?code=:code  200
+/p/:code  /p/index.html?code=:code  200
