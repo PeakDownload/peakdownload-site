@@ -1,94 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HomeOps — PeakDownload</title>
-  <meta name="description" content="Structured home system tracking and lifecycle management. Built by PeakDownload.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/logos/peakdownload-favicon.svg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HomeOps | Peak Download</title>
+  <meta name="description" content="HomeOps helps homeowners organize systems, appliances, maintenance, records, and planning in one place." />
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --card: #ffffff;
+      --text: #1d1d1b;
+      --muted: #67655f;
+      --line: #e8e2d8;
+      --accent: #285b43;
+      --accent-soft: #e7f0eb;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(247,245,239,.92);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 72px;
+      gap: 24px;
+    }
+    .brand { font-weight: 700; letter-spacing: -.02em; }
+    .nav-links { display: flex; gap: 18px; color: var(--muted); font-size: 15px; }
+    .hero {
+      padding: 88px 0 56px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: .98;
+      letter-spacing: -.04em;
+      margin: 0 0 18px;
+      max-width: 860px;
+    }
+    .hero-sub {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 0 28px;
+    }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+    .panel, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+    }
+    .panel { padding: 26px; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .metric {
+      padding: 18px;
+      border-radius: 18px;
+      background: #faf8f3;
+      border: 1px solid var(--line);
+    }
+    .metric-label { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    .metric-value { font-size: 28px; font-weight: 700; letter-spacing: -.03em; }
+    .metric-note { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    .section {
+      padding: 26px 0 10px;
+    }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+    }
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 0 24px;
+      font-size: 18px;
+    }
+    .three-up, .two-up {
+      display: grid;
+      gap: 18px;
+    }
+    .three-up { grid-template-columns: repeat(3, 1fr); }
+    .two-up { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 24px; }
+    .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.02em; }
+    .card p { margin: 0; color: var(--muted); }
+    .card ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); }
+    .quote {
+      margin: 18px 0 0;
+      padding: 24px;
+      border-left: 4px solid var(--accent);
+      background: #fbfaf6;
+      border-radius: 0 20px 20px 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    footer {
+      padding: 42px 0 54px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-row {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .three-up, .two-up { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .hero { padding-top: 64px; }
+    }
+  </style>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="/" class="site-logo">
-        <svg class="site-logo__mark" width="24" height="21" viewBox="0 0 24 21" shape-rendering="geometricPrecision" aria-hidden="true">
-          <polygon points="0,0 0,21 24,21" fill="#F0F0F0"/>
-          <rect x="0" y="14" width="16" height="2" fill="#4A7C9E"/>
-        </svg>
-        <span class="site-logo__name">PeakDownload</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-      <nav class="site-nav">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">PeakDownload</a>
+      <nav class="nav-links">
         <a href="/">Home</a>
-        <a href="/projects/" class="active">Projects</a>
-        <a href="/privacy.html">Privacy</a>
+        <a href="/products/">Products</a>
+        <a href="/privacy-homeops.html">Privacy</a>
+        <a href="mailto:support@peakdownload.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="container">
+    <section class="hero wrap">
+      <div class="eyebrow">HomeOps • Home organization for homeowners</div>
+      <h1>Organize the systems, appliances, records, and maintenance that keep your home running.</h1>
+      <p class="hero-sub">HomeOps helps homeowners keep important information in one place, stay ahead of maintenance, and understand what may need attention before it becomes expensive.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/">Download on the App Store</a>
+        <a class="btn" href="/privacy-homeops.html">View privacy policy</a>
+      </div>
 
-      <div class="page-header">
-        <a href="/projects/" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"/>
-            <polyline points="12 19 5 12 12 5"/>
-          </svg>
-          Projects
-        </a>
-        <span class="eyebrow">Product</span>
-        <h1>HomeOps</h1>
-        <div class="product-meta">
-          <span class="product-meta__item">Vertical SaaS</span>
-          <span class="product-meta__sep"></span>
-          <span class="product-meta__item">Home Management</span>
-          <span class="product-meta__sep"></span>
-          <span class="product-meta__item">In Development</span>
+      <div class="hero-grid">
+        <div class="panel">
+          <h2 style="font-size:30px;margin-bottom:12px;">What HomeOps helps you do</h2>
+          <p class="section-intro" style="margin-bottom:0;font-size:17px;">Keep home information organized, plan ahead with more confidence, and avoid the feeling that everything is scattered across notes, drawers, and old emails.</p>
+          <div class="quote">Track systems and appliances. Keep manuals, warranties, receipts, and service records together. Stay ahead of maintenance. Unlock Health Score and 5-Year Expense Forecast with HomeOps Pro.</div>
+        </div>
+        <div class="panel">
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-label">Health Score</div>
+              <div class="metric-value">0–100</div>
+              <div class="metric-note">A clearer view of your home’s maintenance posture.</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">5-Year Forecast</div>
+              <div class="metric-value">Plan ahead</div>
+              <div class="metric-note">See likely expense exposure before it becomes urgent.</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Documents</div>
+              <div class="metric-value">One place</div>
+              <div class="metric-note">Manuals, warranties, receipts, and service records.</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Maintenance</div>
+              <div class="metric-value">Stay ahead</div>
+              <div class="metric-note">Know what needs attention and what can wait.</div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <hr class="rule">
-
-      <div class="product-body container--narrow">
-        <p>Homeownership has an invisible maintenance workload: HVAC filters, gutter cycles, roof inspections, appliance warranties, seasonal prep. Most of it goes untracked until something fails. Failures are expensive.</p>
-        <p>HomeOps brings structure to home maintenance. It tracks what your home needs, when it needs it, and who did the work. A complete service history, vendor directory, and scheduling system in one place — built for homeowners who want to stay ahead of problems, not respond to them.</p>
-        <p>Think of it as a maintenance operating system for your home.</p>
+    <section class="section wrap">
+      <h2>Built for homeowners who want clarity, not clutter.</h2>
+      <p class="section-intro">HomeOps is designed for the real work of home ownership: understanding what you have, keeping records easy to revisit, and planning for upkeep and replacement without guesswork.</p>
+      <div class="three-up">
+        <div class="card">
+          <h3>Track what matters</h3>
+          <p>Add the systems and appliances you care about and keep a cleaner picture of what is installed, how old it is, and what may need attention next.</p>
+        </div>
+        <div class="card">
+          <h3>Keep records together</h3>
+          <p>Store manuals, receipts, warranty details, and service records alongside the item they belong to, instead of hunting through drawers and inboxes later.</p>
+        </div>
+        <div class="card">
+          <h3>Plan ahead with more confidence</h3>
+          <p>See Health Score and 5-Year Expense Forecast with HomeOps Pro so you can spot likely pressure points before they become expensive surprises.</p>
+        </div>
       </div>
+    </section>
 
-      <hr class="rule">
-
-      <div class="section--tight">
-        <a href="/" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"/>
-            <polyline points="12 19 5 12 12 5"/>
-          </svg>
-          Back to PeakDownload
-        </a>
+    <section class="section wrap">
+      <h2>What you can do with HomeOps</h2>
+      <div class="two-up">
+        <div class="card">
+          <h3>HomeOps</h3>
+          <ul>
+            <li>Track systems and appliances in one place</li>
+            <li>See upcoming maintenance tasks</li>
+            <li>Keep home records organized and easy to revisit</li>
+            <li>Store manuals, receipts, warranties, and service records</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>HomeOps Pro</h3>
+          <ul>
+            <li>Health Score for a clearer sense of home condition</li>
+            <li>5-Year Expense Forecast for replacement planning</li>
+            <li>Expanded tracking for larger or more detailed households</li>
+            <li>Deeper planning insight without adding complexity</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section class="section wrap">
+      <h2>A calmer way to stay on top of home ownership.</h2>
+      <p class="section-intro">Whether you’ve just moved in or want a better system for the home you already own, HomeOps gives you a clearer view of your home over time.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/">Get HomeOps</a>
+        <a class="btn" href="mailto:support@peakdownload.com">Contact support</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <span class="site-footer__copy">PeakDownload &copy; 2026</span>
-      <div class="site-footer__links">
-        <a href="/projects/">Projects</a>
-        <a href="/privacy-homeops.html">HomeOps privacy policy</a>
+  <footer>
+    <div class="wrap footer-row">
+      <div>© 2026 Peak Download LLC</div>
+      <div>
+        <a href="/privacy-homeops.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:support@peakdownload.com">support@peakdownload.com</a>
       </div>
     </div>
   </footer>
-
-  <script src="/assets/js/main.js"></script>
 </body>
 </html>
