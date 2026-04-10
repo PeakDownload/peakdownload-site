@@ -1,5 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/projects/leaguenight",
+      "destination": "/projects/leaguecast/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/leaguenight/",
+      "destination": "/projects/leaguecast/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/c/:code",
