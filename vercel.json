@@ -1,10 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/projects/leaguenight", "destination": "/projects/leaguecast/", "permanent": true },
-    { "source": "/projects/leaguenight/", "destination": "/projects/leaguecast/", "permanent": true },
-    { "source": "/apps", "destination": "/projects/", "permanent": false },
-    { "source": "/apps/:slug", "destination": "/projects/:slug/", "permanent": false },
-    { "source": "/apps/:slug/", "destination": "/projects/:slug/", "permanent": false }
+    {
+      "source": "/projects/leaguenight",
+      "destination": "/projects/leaguecast/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/leaguenight/",
+      "destination": "/projects/leaguecast/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/c/:code",
+      "destination": "/c/index.html?code=:code"
+    },
+    {
+      "source": "/p/:code",
+      "destination": "/p/index.html?code=:code"
+    }
   ]
 }
