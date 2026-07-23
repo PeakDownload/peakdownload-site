@@ -1,9 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
+    { "source": "/projects/walkwise", "destination": "/projects/", "permanent": true },
+    { "source": "/projects/walkwise/", "destination": "/projects/", "permanent": true },
+    { "source": "/apps/walkwise", "destination": "/projects/", "permanent": true },
+    { "source": "/apps/walkwise/", "destination": "/projects/", "permanent": true },
+    { "source": "/privacy-walkwise.html", "destination": "/privacy.html", "permanent": true },
     { "source": "/projects/leaguenight", "destination": "/projects/leaguecast/", "permanent": true },
     { "source": "/projects/leaguenight/", "destination": "/projects/leaguecast/", "permanent": true },
     { "source": "/apps", "destination": "/projects/", "permanent": false },
+    { "source": "/apps/", "destination": "/projects/", "permanent": false },
     { "source": "/apps/:slug", "destination": "/projects/:slug/", "permanent": false },
     { "source": "/apps/:slug/", "destination": "/projects/:slug/", "permanent": false }
   ]

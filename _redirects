@@ -1,3 +1,11 @@
+/projects/walkwise  /projects/  301
+/projects/walkwise/  /projects/  301
+/apps/walkwise  /projects/  301
+/apps/walkwise/  /projects/  301
+/privacy-walkwise.html  /privacy.html  301
+/projects/leaguenight  /projects/leaguecast/  301
 /projects/leaguenight/  /projects/leaguecast/  301
 /apps  /projects/  302
+/apps/  /projects/  302
 /apps/:slug  /projects/:slug/  302
+/apps/:slug/  /projects/:slug/  302

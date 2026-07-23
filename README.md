@@ -1,18 +1,24 @@
 # PeakDownload Website V6
 
-Static rebuild for www.peakdownload.com.
+Dependency-free static website for Peak Download LLC.
 
-## Included
-- Homepage rebuilt around the current PeakDownload app inventory
-- Product pages for Game IQ, HomeOps, WalkWise, and LeagueCast
-- Product-specific privacy policies
-- About page
-- Legacy LeagueNight redirect
-- Optional /apps aliases redirecting to /projects
+## Public products
 
-## Deploy
-Upload this folder to the existing static host/Vercel project.
+- LeagueCast
+- Game IQ: Baseball & Softball
+- HomeOps
 
-## TODO before production
-- Replace any App Store CTA/contact placeholders with final App Store URLs when available.
-- Confirm legal/privacy copy with your preferred legal review process.
+## Architecture
+
+- Static HTML pages
+- Shared CSS in `assets/css/styles.css`
+- Shared navigation and screenshot-gallery behavior in `assets/js/main.js`
+- Static hosting redirects in `_redirects` and `vercel.json`
+
+## Local preview
+
+Serve this directory with any static HTTP server. The repository does not include package tooling, a build command, a linter, or automated tests.
+
+## Deployment
+
+Upload this folder to the existing static host or Vercel project. Deployment is intentionally outside this refresh.
