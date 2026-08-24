@@ -5,7 +5,7 @@
     appOpenBase: "leaguecast://join",
     iosDownloadUrl: "",
     androidDownloadUrl: "",
-    fallbackProductUrl: "/projects/bowling/"
+    fallbackProductUrl: "/projects/leaguecast/"
   };
 
   var ROLE_COPY = {
