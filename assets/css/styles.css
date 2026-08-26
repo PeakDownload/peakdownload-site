@@ -199,6 +199,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .product-gallery__item figcaption strong { display: block; color: var(--text); font-size: 1rem; }
 .product-gallery__item figcaption span { display: block; margin-top: 5px; }
 .faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.scenario-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
 .legal { padding: clamp(24px,5vw,42px); }
 .legal h2 { margin-top: 30px; font-size: 1.5rem; }
 .legal h2:first-child { margin-top: 0; }
@@ -243,7 +244,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero__grid { gap: 24px; }
   .hero-brand { min-height: 320px; }
   .hero-brand__frame { max-width: 290px; padding: 24px; border-radius: 27px; }
-  .feature-grid, .role-grid, .detail-grid, .product-grid, .faq-grid { grid-template-columns: 1fr; }
+  .feature-grid, .role-grid, .detail-grid, .product-grid, .faq-grid, .scenario-grid { grid-template-columns: 1fr; }
   .product-gallery { grid-auto-columns: minmax(250px, 82vw); }
   .product-card { min-height: 260px; padding: 23px; }
   .product-card--featured { grid-column: auto; min-height: 290px; }
