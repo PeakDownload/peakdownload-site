@@ -1,14 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="PeakDownload logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="PeakDownload">
+
+<rect width="128" height="128" rx="26" fill="#020617"/>
+<g transform="translate(5,25) scale(.35)">
 
 <defs>
-  <linearGradient id="fav" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#06B6D4"/>
-    <stop offset="100%" stop-color="#2563EB"/>
+  <linearGradient id="summitGrad" x1="0" y1="0" x2="0.65" y2="1">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#F6F8FA"/>
+    <stop offset="100%" stop-color="#9FB2C6"/>
+  </linearGradient>
+  <linearGradient id="midGrad" x1="0" y1="0" x2="1" y2="0.9">
+    <stop offset="0%" stop-color="#7CCBFF"/>
+    <stop offset="58%" stop-color="#3A91EA"/>
+    <stop offset="100%" stop-color="#2563BE"/>
+  </linearGradient>
+  <linearGradient id="bottomGrad" x1="0" y1="0" x2="1" y2="0.75">
+    <stop offset="0%" stop-color="#11C5E9"/>
+    <stop offset="52%" stop-color="#2588F2"/>
+    <stop offset="100%" stop-color="#244FE8"/>
   </linearGradient>
 </defs>
-<rect x="0" y="0" width="64" height="64" rx="14" fill="#020617"/>
-<path d="M9 43 L31 16 L47 31 L42 36 L31 26 L17 43 Z" fill="#F6F8FA"/>
-<path d="M9 50 L31 34 L51 47 L45 51 L31 42 L20 50 Z" fill="url(#fav)"/>
-<path d="M20 54 L37 43 L56 54 L49 54 L37 48 L28 54 Z" fill="#2563EB"/>
+
+<polygon points="247,97 175,18 43,163 175,67 227,111" fill="url(#summitGrad)"/>
+<polygon points="141,106 236,167 284,140 256,108 227,127 175,83" fill="url(#midGrad)"/>
+<polygon points="23,189 126,152 195,189 325,188 292,151 236,181 129,114" fill="url(#bottomGrad)"/>
+</g>
 
 </svg>
