@@ -24,6 +24,6 @@
 <polygon points="141,106 236,167 284,140 256,108 227,127 175,83" fill="url(#midGrad)"/>
 <polygon points="23,189 126,152 195,189 325,188 292,151 236,181 129,114" fill="url(#bottomGrad)"/>
 </g>
-<text x="158" y="91" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#020617">PeakDownload</text>
+<text x="158" y="91" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#020617" textLength="347" lengthAdjust="spacingAndGlyphs">PeakDownload</text>
 
 </svg>
