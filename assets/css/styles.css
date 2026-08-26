@@ -61,7 +61,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .site-header__inner { min-height: var(--header); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .site-logo { display: inline-flex; align-items: center; gap: 11px; font-weight: 850; letter-spacing: -0.03em; }
-.site-logo__mark { width: 25px; height: 22px; }
+.site-logo__mark { width: 32px; height: 27px; }
+.site-logo__download { color: var(--muted); }
 .site-nav { display: flex; align-items: center; gap: 5px; }
 .site-nav a { padding: 9px 12px; border-radius: 10px; color: var(--muted); font-size: 0.92rem; font-weight: 720; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); background: rgba(255,255,255,.07); }
@@ -162,6 +163,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .leaguecast-feature p { max-width: 650px; margin-top: 18px; }
 .page-hero { padding: clamp(52px, 7vw, 84px) 0 48px; }
 .page-hero h1 { max-width: 18ch; }
+.about-brand-mark { display: block; width: min(100%, 168px); height: auto; margin-bottom: 24px; }
 .back-link { display: inline-flex; margin-bottom: 28px; color: var(--muted); font-weight: 760; }
 .product-meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; color: var(--soft); font-size: .9rem; font-weight: 760; }
 .product-meta span + span::before { content: "·"; margin-right: 9px; color: var(--blue); }
@@ -210,6 +212,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .site-footer { margin-top: 30px; border-top: 1px solid var(--line); background: rgba(3,7,14,.5); }
 .site-footer__inner { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; padding-block: 34px; }
 .site-footer__brand { font-weight: 850; }
+.site-footer__tagline { margin-top: 4px; color: var(--soft); font-size: .88rem; }
 .site-footer__copy { margin-top: 4px; color: var(--soft); font-size: .88rem; }
 .site-footer__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 16px; color: var(--muted); font-size: .9rem; }
 

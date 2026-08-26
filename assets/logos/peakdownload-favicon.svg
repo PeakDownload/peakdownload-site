@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="geometricPrecision">
   <!--
-    PEAK DOWNLOAD — FAVICON v4
-    ───────────────────────────
-    Right triangle, inset 4px on all sides.
-    Bottom-left: (4, 28)  Bottom-right: (28, 28)  Top-left: (4, 4)
-    At 32px the datum line is subpixel noise — omit it. The shape is enough.
+    PEAK DOWNLOAD — FAVICON v5 (layered mountain)
+    Same composition as peakdownload-icon.svg, scaled for
+    legibility at 16–32px. Bold solid fills, no fine detail.
   -->
-  <rect width="32" height="32" fill="#0C0C0C" rx="6"/>
-  <polygon points="4,4 4,28 28,28" fill="#F2F2F2"/>
+  <rect width="32" height="32" fill="#020617" rx="6"/>
+  <polygon points="16,7 7,24 25,24" fill="#F4F7FB"/>
+  <polygon points="11,14 5,24 20,24" fill="#2563EB"/>
+  <polygon points="21,15 12,24 27,24" fill="#06B6D4"/>
 </svg>
