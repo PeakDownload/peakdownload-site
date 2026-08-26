@@ -17,494 +17,166 @@
       --gray-200: #E5E5E5;
       --gray-400: #999999;
       --gray-600: #444444;
-      --gray-800: #1A1A1A;
       --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', sans-serif;
     }
 
-    body {
-      font-family: var(--font);
-      background: #F2F2F2;
-      color: var(--black);
-      min-height: 100vh;
-    }
+    body { font-family: var(--font); background: #F2F2F2; color: var(--black); min-height: 100vh; }
 
-    header {
-      padding: 48px 64px 32px;
-      border-bottom: 1px solid var(--gray-200);
-      background: white;
-    }
-
-    header h1 {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-    }
-
-    header p {
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--black);
-      margin-top: 6px;
-      letter-spacing: -0.5px;
-    }
+    header { padding: 48px 64px 32px; border-bottom: 1px solid var(--gray-200); background: white; }
+    header h1 { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+    header p { font-size: 28px; font-weight: 600; color: var(--black); margin-top: 6px; letter-spacing: -0.5px; }
+    header p span { color: var(--gray-400); font-weight: 500; font-size: 16px; }
 
     .site-return {
-      display: inline-block;
-      margin-top: 16px;
-      color: var(--gray-600);
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      display: inline-block; margin-top: 16px; color: var(--gray-600); font-size: 13px;
+      font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
     }
+    .site-return:focus-visible { outline: 3px solid #2563EB; outline-offset: 4px; }
 
-    .site-return:focus-visible {
-      outline: 3px solid #2563EB;
-      outline-offset: 4px;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 64px 64px 120px;
-      display: grid;
-      gap: 48px;
-    }
+    main { max-width: 1100px; margin: 0 auto; padding: 64px 64px 120px; display: grid; gap: 48px; }
 
     section {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
+      background: white; border-radius: 16px; overflow: hidden;
       box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
     }
 
     .section-header {
-      padding: 24px 32px;
-      border-bottom: 1px solid var(--gray-200);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 24px 32px; border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
     }
+    .section-header h2 { font-size: 14px; font-weight: 600; color: var(--black); }
+    .section-header span { font-size: 12px; color: var(--gray-400); font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; }
 
-    .section-header h2 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--black);
-      letter-spacing: -0.1px;
+    .swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .swatch-cell {
+      padding: 40px 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;
+      border-right: 1px solid var(--gray-200); border-top: 1px solid var(--gray-200);
     }
+    .swatch-cell:nth-child(3n) { border-right: none; }
+    .swatch-cell:nth-child(-n+3) { border-top: none; }
+    .swatch-cell.dark-bg { background: #020617; }
+    .cell-label { font-size: 11px; font-weight: 500; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; }
+    .swatch-cell.dark-bg .cell-label { color: #555; }
+    .swatch-cell img { display: block; }
 
-    .section-header span {
-      font-size: 12px;
-      color: var(--gray-400);
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
+    .row { padding: 40px 32px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; }
+    .row.dark-bg { background: #020617; }
+    .fav-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .fav-item span { font-size: 11px; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
 
-    /* Icon grid */
-    .icon-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
+    .swatches { padding: 32px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .swatch { display: flex; flex-direction: column; gap: 12px; }
+    .swatch-box { width: 80px; height: 80px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); }
+    .swatch-name { font-size: 12px; font-weight: 600; color: var(--black); }
+    .swatch-hex { font-size: 11px; color: var(--gray-400); letter-spacing: 0.04em; }
 
-    .icon-cell {
-      padding: 48px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      border-right: 1px solid var(--gray-200);
-    }
-
-    .icon-cell:last-child { border-right: none; }
-
-    .icon-cell.dark-bg {
-      background: #020617;
-    }
-
-    .icon-label {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--gray-400);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .icon-cell.dark-bg .icon-label {
-      color: #555;
-    }
-
-    /* Horizontal / stacked wordmark */
-    .wordmark-cell {
-      padding: 56px 48px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    .wordmark-row {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    .wordmark-row.dark {
-      background: #020617;
-      border-radius: 12px;
-      padding: 32px 40px;
-    }
-
-    .wordmark-row.stacked {
-      justify-content: center;
-    }
-
-    /* Favicon row */
-    .favicon-row {
-      padding: 40px 32px;
-      display: flex;
-      gap: 32px;
-      align-items: flex-end;
-    }
-
-    .fav-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .fav-item span {
-      font-size: 11px;
-      color: var(--gray-400);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    /* Color swatches */
-    .swatches {
-      padding: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .swatch {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .swatch-box {
-      width: 80px;
-      height: 80px;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .swatch-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--black);
-    }
-
-    .swatch-hex {
-      font-size: 11px;
-      color: var(--gray-400);
-      letter-spacing: 0.04em;
-    }
-
-    /* Large export preview */
-    .export-cell {
-      padding: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #020617;
-      min-height: 300px;
-    }
-
-    /* Typography spec */
-    .type-spec {
-      padding: 32px;
-    }
-
-    .type-row {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--gray-200);
-      display: flex;
-      align-items: baseline;
-      gap: 32px;
-    }
-
+    .type-spec { padding: 32px; }
+    .type-row { padding: 20px 0; border-bottom: 1px solid var(--gray-200); display: flex; align-items: baseline; gap: 32px; flex-wrap: wrap; }
     .type-row:last-child { border-bottom: none; }
+    .type-label { width: 140px; font-size: 11px; color: var(--gray-400); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0; }
+    .type-sample { font-family: var(--font); color: var(--black); }
+    .size-note { font-size: 11px; color: var(--gray-400); margin-left: auto; }
 
-    .type-label {
-      width: 140px;
-      font-size: 11px;
-      color: var(--gray-400);
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      flex-shrink: 0;
-    }
-
-    .type-sample {
-      font-family: var(--font);
-      color: var(--black);
-    }
-
-    .size-note {
-      font-size: 11px;
-      color: var(--gray-400);
-      margin-left: auto;
-    }
-
-    .retired-note {
-      padding: 20px 32px;
-      background: #FFF7ED;
-      border-top: 1px solid #FDE4C0;
-      font-size: 13px;
-      color: #92400E;
-    }
+    .usage-note { padding: 20px 32px; background: #EFF6FF; border-top: 1px solid #BFDBFE; font-size: 13px; color: #1E3A8A; line-height: 1.6; }
+    .usage-note strong { color: #1E3A8A; }
+    .usage-note + .usage-note { border-top: none; }
+    .usage-note ul { margin: 6px 0 0 18px; padding: 0; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Brand Identity — v5</h1>
-    <p>PeakDownload LLC — Logo System</p>
+    <h1>Brand Identity</h1>
+    <p>PeakDownload LLC <span>— Canonical Logo Kit v2 (Layered Descent)</span></p>
     <a class="site-return" href="/">← PeakDownload home</a>
   </header>
 
   <main>
 
-    <!-- ICON MARK -->
+    <!-- MARK -->
     <section>
-      <div class="section-header">
-        <h2>Icon Mark — Layered Mountain</h2>
-        <span>Square — 400 × 400</span>
-      </div>
-      <div class="icon-grid">
-
-        <div class="icon-cell dark-bg">
-          <svg viewBox="0 0 400 400" width="160" height="160" shape-rendering="geometricPrecision">
-            <rect width="400" height="400" fill="#020617" rx="84"/>
-            <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-            <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-            <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-          </svg>
-          <span class="icon-label">On Night</span>
-        </div>
-
-        <div class="icon-cell" style="background:#F2F2F2;">
-          <svg viewBox="0 0 400 400" width="160" height="160" shape-rendering="geometricPrecision">
-            <polygon points="200,92 88,304 312,304" fill="#0F172A" fill-opacity="1"/>
-            <polygon points="140,176 60,304 256,304" fill="#0F172A" fill-opacity="0.72"/>
-            <polygon points="262,192 152,304 340,304" fill="#0F172A" fill-opacity="0.48"/>
-          </svg>
-          <span class="icon-label" style="color:#999;">Monochrome dark</span>
-        </div>
-
-        <div class="icon-cell" style="background:white; border-right:none;">
-          <svg viewBox="0 0 400 400" width="160" height="160" shape-rendering="geometricPrecision">
-            <rect width="400" height="400" fill="#020617" rx="84"/>
-            <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-            <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-            <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-          </svg>
-          <span class="icon-label">App icon (rounded square)</span>
-        </div>
-
+      <div class="section-header"><h2>Icon Mark</h2><span>peakdownload-mark-color.svg — 400 × 320</span></div>
+      <div class="swatch-grid">
+        <div class="swatch-cell dark-bg"><img src="peakdownload-mark-color.svg" width="140" height="112" alt="PeakDownload mark, full color, on dark"><span class="cell-label">Full color</span></div>
+        <div class="swatch-cell" style="background:#F2F2F2;"><img src="peakdownload-mark-mono-dark.svg" width="140" height="112" alt="PeakDownload mark, monochrome dark, for light surfaces"><span class="cell-label">Monochrome — for light surfaces</span></div>
+        <div class="swatch-cell dark-bg"><img src="peakdownload-mark-mono-white.svg" width="140" height="112" alt="PeakDownload mark, monochrome white, for dark surfaces"><span class="cell-label">Monochrome — for dark surfaces</span></div>
       </div>
     </section>
 
-    <!-- HORIZONTAL + STACKED LOCKUPS -->
+    <!-- LOCKUPS -->
     <section>
-      <div class="section-header">
-        <h2>Primary Horizontal &amp; Secondary Stacked Lockups</h2>
-        <span>Transparent SVG</span>
+      <div class="section-header"><h2>Horizontal &amp; Stacked Lockups</h2><span>Transparent-free SVG, own background baked in</span></div>
+      <div class="row dark-bg">
+        <img src="peakdownload-primary-horizontal-dark.svg" width="480" height="156" alt="PeakDownload primary horizontal lockup, dark, with tagline">
       </div>
-      <div class="wordmark-cell">
-
-        <div class="wordmark-row dark">
-          <svg viewBox="0 0 860 220" width="500" height="128" shape-rendering="geometricPrecision">
-            <g transform="translate(20,10) scale(0.4)">
-              <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-              <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-              <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-            </g>
-            <text x="182" y="98" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" letter-spacing="-1.5" dominant-baseline="middle"><tspan fill="#F4F7FB">Peak</tspan><tspan fill="#8391AA">Download</tspan></text>
-            <text x="184" y="150" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="600" fill="#B1BDD1">Real-World Solutions. Real-World Impact.</text>
-          </svg>
-        </div>
-
-        <div class="wordmark-row stacked dark">
-          <svg viewBox="0 0 400 340" width="220" height="187" shape-rendering="geometricPrecision">
-            <g transform="translate(100,0) scale(0.5)">
-              <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-              <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-              <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-            </g>
-            <text x="200" y="192" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="42" font-weight="800" letter-spacing="-1"><tspan fill="#F4F7FB">Peak</tspan><tspan fill="#8391AA">Download</tspan></text>
-            <text x="200" y="228" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="600" fill="#B1BDD1">Real-World Solutions. Real-World Impact.</text>
-          </svg>
-        </div>
-
+      <div class="row" style="background:#fff;">
+        <img src="peakdownload-primary-horizontal-light.svg" width="480" height="156" alt="PeakDownload primary horizontal lockup, light, with tagline">
       </div>
-      <div class="retired-note">Tagline is baked into these two lockup files only. Elsewhere on the site the tagline runs as live text (homepage footer, About page), not as image content — see the handoff notes for exact placements.</div>
-    </section>
-
-    <!-- FAVICON / SMALL SIZES -->
-    <section>
-      <div class="section-header">
-        <h2>Favicon &amp; Small Sizes</h2>
-        <span>SVG — Scales losslessly</span>
+      <div class="row dark-bg">
+        <img src="peakdownload-horizontal-no-tagline-dark.svg" width="360" height="95" alt="PeakDownload horizontal lockup, no tagline — used in site navigation">
+        <img src="peakdownload-primary-stacked-dark.svg" width="180" height="194" alt="PeakDownload stacked lockup, dark, with tagline — used on the About page">
       </div>
-      <div class="favicon-row">
-
-        <div class="fav-item">
-          <svg viewBox="0 0 32 32" width="16" height="16" shape-rendering="geometricPrecision">
-            <rect width="32" height="32" fill="#020617" rx="6"/>
-            <polygon points="16,7 7,24 25,24" fill="#F4F7FB"/>
-            <polygon points="11,14 5,24 20,24" fill="#2563EB"/>
-            <polygon points="21,15 12,24 27,24" fill="#06B6D4"/>
-          </svg>
-          <span>16px</span>
-        </div>
-
-        <div class="fav-item">
-          <svg viewBox="0 0 32 32" width="32" height="32" shape-rendering="geometricPrecision">
-            <rect width="32" height="32" fill="#020617" rx="6"/>
-            <polygon points="16,7 7,24 25,24" fill="#F4F7FB"/>
-            <polygon points="11,14 5,24 20,24" fill="#2563EB"/>
-            <polygon points="21,15 12,24 27,24" fill="#06B6D4"/>
-          </svg>
-          <span>32px</span>
-        </div>
-
-        <div class="fav-item">
-          <svg viewBox="0 0 400 400" width="64" height="64" shape-rendering="geometricPrecision">
-            <rect width="400" height="400" fill="#020617" rx="84"/>
-            <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-            <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-            <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-          </svg>
-          <span>64px</span>
-        </div>
-
-        <div class="fav-item">
-          <svg viewBox="0 0 400 400" width="128" height="128" shape-rendering="geometricPrecision">
-            <rect width="400" height="400" fill="#020617" rx="84"/>
-            <polygon points="200,92 88,304 312,304" fill="#F4F7FB"/>
-            <polygon points="140,176 60,304 256,304" fill="#2563EB"/>
-            <polygon points="262,192 152,304 340,304" fill="#06B6D4"/>
-          </svg>
-          <span>128px</span>
-        </div>
-
+      <div class="usage-note">
+        <strong>Site wiring:</strong> the no-tagline horizontal lockup (left) is used in the global header on every page. The stacked lockup (right) is used once, on the About page hero. Neither the primary horizontal nor the primary stacked lockup is currently embedded anywhere on the live site — they're available for future company-brand contexts (decks, press, email).
       </div>
     </section>
 
-    <!-- 1024 EXPORT -->
+    <!-- FAVICON -->
     <section>
-      <div class="section-header">
-        <h2>1024 × 1024 — Export Ready</h2>
-        <span>App Store / Social Media</span>
+      <div class="section-header"><h2>Favicon</h2><span>peakdownload-favicon.svg — scales losslessly</span></div>
+      <div class="row dark-bg">
+        <div class="fav-item"><img src="peakdownload-favicon.svg" width="16" height="16" alt="Favicon at 16px"><span>16px</span></div>
+        <div class="fav-item"><img src="peakdownload-favicon.svg" width="32" height="32" alt="Favicon at 32px"><span>32px</span></div>
+        <div class="fav-item"><img src="peakdownload-favicon.svg" width="64" height="64" alt="Favicon at 64px"><span>64px</span></div>
+        <div class="fav-item"><img src="peakdownload-favicon.svg" width="128" height="128" alt="Favicon at 128px"><span>128px</span></div>
       </div>
-      <div class="export-cell">
-        <svg viewBox="0 0 1024 1024" width="280" height="280" shape-rendering="geometricPrecision">
-          <rect width="1024" height="1024" fill="#020617" rx="215"/>
-          <polygon points="512,235 225,778 799,778" fill="#F4F7FB"/>
-          <polygon points="358,451 154,778 655,778" fill="#2563EB"/>
-          <polygon points="671,492 389,778 870,778" fill="#06B6D4"/>
-        </svg>
-      </div>
+      <div class="usage-note">Used as-is for every page's <code>&lt;link rel="icon"&gt;</code> except the LeagueCast product page, which keeps its own app-icon PNG.</div>
+    </section>
+
+    <!-- STANDALONE TAGLINE -->
+    <section>
+      <div class="section-header"><h2>Standalone Tagline</h2><span>peakdownload-tagline-*.svg — 1200 × 180</span></div>
+      <div class="row dark-bg"><img src="peakdownload-tagline-dark.svg" width="480" height="72" alt="Real-World Solutions. Real-World Impact. — dark"></div>
+      <div class="usage-note">Not currently embedded on the live site as an image. The homepage footer carries this same line as live text, colored to match (Alpine Blue / Sky Cyan) rather than as an image, so it stays real, selectable text.</div>
     </section>
 
     <!-- COLORS -->
     <section>
-      <div class="section-header">
-        <h2>Color Palette</h2>
-        <span>Brand Colors</span>
-      </div>
+      <div class="section-header"><h2>Canonical Colors</h2></div>
       <div class="swatches">
-        <div class="swatch">
-          <div class="swatch-box" style="background:#020617;"></div>
-          <div class="swatch-name">Night</div>
-          <div class="swatch-hex">#020617</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-box" style="background:#0F172A;"></div>
-          <div class="swatch-name">Deep Slate</div>
-          <div class="swatch-hex">#0F172A</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-box" style="background:#2563EB;"></div>
-          <div class="swatch-name">Alpine Blue</div>
-          <div class="swatch-hex">#2563EB</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-box" style="background:#06B6D4;"></div>
-          <div class="swatch-name">Sky Cyan</div>
-          <div class="swatch-hex">#06B6D4</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-box" style="background:#8CA0B3;"></div>
-          <div class="swatch-name">Granite</div>
-          <div class="swatch-hex">#8CA0B3</div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-box" style="background:#F4F7FB; border:1px solid #E5E5E5;"></div>
-          <div class="swatch-name">Summit White</div>
-          <div class="swatch-hex">#F4F7FB</div>
-        </div>
+        <div class="swatch"><div class="swatch-box" style="background:#020617;"></div><div class="swatch-name">Night</div><div class="swatch-hex">#020617</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#0F172A;"></div><div class="swatch-name">Deep Slate</div><div class="swatch-hex">#0F172A</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#2563EB;"></div><div class="swatch-name">Alpine Blue</div><div class="swatch-hex">#2563EB</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#06B6D4;"></div><div class="swatch-name">Sky Cyan</div><div class="swatch-hex">#06B6D4</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#8CA0B3;"></div><div class="swatch-name">Granite</div><div class="swatch-hex">#8CA0B3</div></div>
+        <div class="swatch"><div class="swatch-box" style="background:#F6F8FA; border:1px solid #E5E5E5;"></div><div class="swatch-name">Summit White</div><div class="swatch-hex">#F6F8FA</div></div>
       </div>
     </section>
 
-    <!-- TYPE SPEC -->
+    <!-- TYPE / TAGLINE SPEC -->
     <section>
-      <div class="section-header">
-        <h2>Typography &amp; Tagline</h2>
-        <span>System Font Stack</span>
-      </div>
+      <div class="section-header"><h2>Typography</h2><span>System Font Stack</span></div>
       <div class="type-spec">
-        <div class="type-row">
-          <span class="type-label">Wordmark</span>
-          <span class="type-sample" style="font-size:32px; font-weight:800; letter-spacing:-0.5px;">PeakDownload</span>
-          <span class="size-note">800 / two-tone: Peak bright, Download muted</span>
-        </div>
-        <div class="type-row">
-          <span class="type-label">Tagline</span>
-          <span class="type-sample" style="font-size:16px; font-weight:600;">Real-World Solutions. Real-World Impact.</span>
-          <span class="size-note">Selective use — see handoff</span>
-        </div>
-        <div class="type-row">
-          <span class="type-label">Stack</span>
-          <span class="type-sample" style="font-size:12px; color:#999; font-family: monospace;">Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI</span>
-        </div>
+        <div class="type-row"><span class="type-label">Wordmark</span><span class="type-sample" style="font-size:32px; font-weight:820;">Peak<span style="color:#64748B; font-weight:720;">Download</span></span><span class="size-note">Two-tone: Peak bright, Download muted</span></div>
+        <div class="type-row"><span class="type-label">Tagline</span><span class="type-sample" style="font-size:16px; font-weight:650;">Real-World <span style="color:#2563EB; font-weight:800;">Solutions.</span> Real-World <span style="color:#06B6D4; font-weight:800;">Impact.</span></span></div>
+        <div class="type-row"><span class="type-label">Stack</span><span class="type-sample" style="font-size:12px; color:#999; font-family: monospace;">Inter, Arial, sans-serif</span></div>
       </div>
     </section>
 
     <!-- FILES -->
     <section>
-      <div class="section-header">
-        <h2>Asset Files</h2>
-        <span>assets/logos/</span>
-      </div>
+      <div class="section-header"><h2>Asset Files</h2><span>assets/logos/ — Canonical Kit v2</span></div>
       <div class="type-spec">
-        <div class="type-row"><span class="type-label">Icon Mark</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-icon.svg</span><span class="size-note">400 × 400</span></div>
-        <div class="type-row"><span class="type-label">Favicon</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-favicon.svg</span><span class="size-note">32 × 32</span></div>
-        <div class="type-row"><span class="type-label">Horizontal</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-horizontal.svg</span><span class="size-note">860 × 220, with tagline</span></div>
-        <div class="type-row"><span class="type-label">Stacked</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-stacked.svg</span><span class="size-note">400 × 340, with tagline</span></div>
-        <div class="type-row"><span class="type-label">Mono (dark)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-mono-dark.svg</span><span class="size-note">400 × 400, transparent</span></div>
-        <div class="type-row"><span class="type-label">Mono (white)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-mono-white.svg</span><span class="size-note">400 × 400, transparent</span></div>
-        <div class="type-row"><span class="type-label">PNG-ready</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-1024.svg</span><span class="size-note">1024 × 1024</span></div>
+        <div class="type-row"><span class="type-label">Icon (color)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-mark-color.svg</span><span class="size-note">400 × 320, transparent</span></div>
+        <div class="type-row"><span class="type-label">Icon (mono dark)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-mark-mono-dark.svg</span><span class="size-note">400 × 320, transparent</span></div>
+        <div class="type-row"><span class="type-label">Icon (mono white)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-mark-mono-white.svg</span><span class="size-note">400 × 320, transparent</span></div>
+        <div class="type-row"><span class="type-label">Favicon</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-favicon.svg</span><span class="size-note">64 × 64</span></div>
+        <div class="type-row"><span class="type-label">Header (no tagline)</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-horizontal-no-tagline-dark.svg / -light.svg</span><span class="size-note">1200 × 315 — used in nav</span></div>
+        <div class="type-row"><span class="type-label">Primary horizontal</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-primary-horizontal-dark.svg / -light.svg</span><span class="size-note">1200 × 390, with tagline</span></div>
+        <div class="type-row"><span class="type-label">Primary stacked</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-primary-stacked-dark.svg / -light.svg</span><span class="size-note">760 × 820, with tagline — used on About</span></div>
+        <div class="type-row"><span class="type-label">Standalone tagline</span><span class="type-sample" style="font-size:14px; font-family:monospace;">peakdownload-tagline-dark.svg / -light.svg</span><span class="size-note">1200 × 180</span></div>
       </div>
-      <div class="retired-note">Superseded: the pre-v5 right-triangle mark (Obsidian #0A0A0A / off-white #F2F2F2 / steel-blue #4A7C9E datum line) has been fully replaced. No page on the live site references it any longer.</div>
+      <div class="usage-note">Full usage rules: <a href="README.md">README.md</a> in this directory.</div>
     </section>
 
   </main>

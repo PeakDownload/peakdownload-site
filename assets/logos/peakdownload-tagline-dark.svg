@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" role="img" aria-label="PeakDownload logo">
+
+    <rect width="1200" height="180" rx="24" fill="#020617"/>
+    <text x="600" y="110" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="680" fill="#F6F8FA">
+      Real-World <tspan fill="#2563EB" font-weight="820">Solutions.</tspan>
+      <tspan dx="10">Real-World </tspan><tspan fill="#06B6D4" font-weight="820">Impact.</tspan>
+    </text>
+
+</svg>
