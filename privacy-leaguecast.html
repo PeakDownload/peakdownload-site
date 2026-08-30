@@ -10,15 +10,72 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="container site-header__inner"><a href="/" class="site-logo" aria-label="PeakDownload home"><img src="/assets/logos/peakdownload-horizontal-no-tagline-dark.svg" width="191" height="44" alt="PeakDownload" class="site-logo__lockup"></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav class="site-nav" id="site-navigation" aria-label="Primary navigation"><a href="/">Home</a><a href="/projects/">Products</a><a href="/about.html">About</a><a href="/privacy.html" aria-current="page">Privacy</a><a href="mailto:contact@peakdownload.com">Contact</a></nav></div></header>
-  <main id="main"><section class="page-hero"><div class="container container--narrow"><span class="eyebrow">Privacy</span><h1>LeagueCast Privacy Policy</h1><p class="page-hero__lede">Last updated: May 2026</p></div></section><section class="section section--tight"><div class="container container--narrow"><div class="legal">
-    <h2>Overview</h2><p>This policy describes how Peak Download LLC handles information for LeagueCast, a recreational league scoring and operations product.</p>
-    <h2>Information we may collect</h2><ul><li>Account and league profile information provided by users.</li><li>League, team, player, schedule, scoring, standings, and result information entered through the product.</li><li>Basic usage, diagnostic, and crash information used to improve reliability.</li></ul>
-    <h2>How we use information</h2><p>We use information to operate LeagueCast, provide support, maintain league records, improve reliability, and respond to requests.</p>
-    <h2>What we do not do</h2><ul><li>We do not sell personal information.</li><li>We do not use league data for third-party advertising resale.</li><li>We do not collect more information than is reasonably needed for product operation and support.</li></ul>
-    <h2>Service providers</h2><p>LeagueCast may rely on cloud hosting, authentication, analytics, and crash-reporting services where needed to operate and improve the product.</p>
-    <h2>Retention and deletion</h2><p>We retain information only as long as reasonably needed for product operation, support, legal, or business purposes. Contact us to request deletion.</p>
-    <h2>Contact</h2><p>Privacy questions or requests may be sent to <a href="mailto:privacy@peakdownload.com">privacy@peakdownload.com</a>.</p>
+  <header class="site-header"><div class="container site-header__inner"><a href="/" class="site-logo" aria-label="PeakDownload home"><img src="/assets/logos/peakdownload-horizontal-no-tagline-dark.svg" width="191" height="44" alt="PeakDownload" class="site-logo__lockup"></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav class="site-nav" id="site-navigation" aria-label="Primary navigation"><a href="/">Home</a><a href="/projects/">Products</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms-leaguecast.html">Terms</a><a href="mailto:contact@peakdownload.com">Contact</a></nav></div></header>
+  <main id="main"><section class="page-hero"><div class="container container--narrow"><span class="eyebrow">Privacy</span><h1>LeagueCast Privacy Policy</h1><p class="page-hero__lede">Last updated: August 2026</p></div></section><section class="section section--tight"><div class="container container--narrow"><div class="legal">
+
+    <h2>Overview</h2>
+    <p>This Privacy Policy explains how Peak Download LLC ("Peak Download," "we," "us," or "our") handles information for LeagueCast, a mobile app for organizing and scoring amateur sports leagues ("LeagueCast" or the "App"). It applies to LeagueCast only. If anything here conflicts with a claim made elsewhere, this page and the App's actual behavior control.</p>
+
+    <h2>Information we collect</h2>
+    <p>LeagueCast collects only the information needed to run an account and a league:</p>
+    <ul>
+      <li><strong>Account information you provide:</strong> your full name, email address, and password at sign-up. Your password is handled by our authentication provider (Firebase Authentication) and is never visible to us in plain text.</li>
+      <li><strong>Account identifier:</strong> a unique user ID assigned by Firebase Authentication when your account is created.</li>
+      <li><strong>League membership and role information:</strong> which leagues, seasons, and teams you belong to, and your role in them (for example, commissioner, captain, or player).</li>
+      <li><strong>League, schedule, and scoring data:</strong> team and player names, schedules, scores, results, standings, and statistics that you or other league participants enter, or that the App calculates from that entered data.</li>
+      <li><strong>Sponsor or league-partner banner images:</strong> if a league commissioner uses the optional sponsor feature, LeagueCast requests access to your device's photo library only to select and upload that banner image.</li>
+    </ul>
+    <p>LeagueCast does <strong>not</strong> currently collect app usage analytics, crash or diagnostic telemetry, advertising identifiers, precise or approximate location, contacts, camera access, or microphone access. We do not request any device permission beyond photo-library access for the sponsor-banner feature described above.</p>
+
+    <h2>How we use information</h2>
+    <p>We use the information above to:</p>
+    <ul>
+      <li>create and authenticate your account, and let you sign back in and reset a forgotten password;</li>
+      <li>operate the leagues, seasons, and teams you create or join;</li>
+      <li>calculate and display schedules, scores, standings, and statistics;</li>
+      <li>support account and league administration, including responding to support requests; and</li>
+      <li>operate and secure the service, including maintaining the underlying database and preventing misuse.</li>
+    </ul>
+
+    <h2>Third-party service providers</h2>
+    <p>LeagueCast is built on a small number of third-party service providers who process information on our behalf to run the App:</p>
+    <ul>
+      <li><strong>Firebase (Google Cloud):</strong> account authentication, our database, and the backend functions that run league, scoring, and account-deletion logic.</li>
+      <li><strong>Resend:</strong> delivers password-reset emails on our behalf.</li>
+    </ul>
+    <p>LeagueCast includes a dormant subscription feature ("LeagueCast Pro") built on RevenueCat, a subscription-billing provider. In the current version of the App, this feature is disabled for every user: the RevenueCat SDK is never initialized and no purchase, subscription, or billing data is collected or transmitted to RevenueCat or any payment processor. If we enable a paid feature in a future release, we will update this policy before doing so to describe what purchase-related information is collected and shared.</p>
+    <p>We do not sell your personal information, and we do not share league or account data with third parties for their own advertising purposes.</p>
+
+    <h2>Advertising and tracking</h2>
+    <p>LeagueCast does not include advertising SDKs, does not display third-party ads, and does not track you across other companies' apps or websites. No advertising identifier is collected or used.</p>
+
+    <h2>Retention and account deletion</h2>
+    <p>You can delete your LeagueCast account at any time, in two ways:</p>
+    <ul>
+      <li><strong>In the app:</strong> before joining or creating a league, tap <strong>Account</strong> on the entry screen; afterward, go to <strong>Settings → Account &amp; Privacy</strong>. Either way, tap <strong>Delete Account</strong> and confirm.</li>
+      <li><strong>Without the app:</strong> see <a href="/account-deletion-leaguecast.html">LeagueCast account deletion</a> for how to request deletion by email if you cannot or do not want to open the App.</li>
+    </ul>
+    <p>Confirming deletion removes your sign-in immediately. LeagueCast then removes:</p>
+    <ul>
+      <li>your account profile record; and</li>
+      <li>your membership records in any leagues, teams, and seasons you participated in.</li>
+    </ul>
+    <p>League and season records that other participants rely on — such as completed scores, results, standings, and statistics — are part of the league's shared competitive history and are <strong>not</strong> deleted when you delete your account. These records are not automatically anonymized or disconnected from the name you used at the time; they remain part of the historical record for the leagues you played in, in the same way a paper standings sheet or scorebook from past play would. We retain them because they are collectively maintained league records that other participants continue to rely on, not private records belonging only to you. See <a href="/account-deletion-leaguecast.html">LeagueCast account deletion</a> for full detail on what is deleted and what is retained.</p>
+
+    <h2>Security</h2>
+    <p>We use our service providers' industry-standard access controls and infrastructure to protect information. No method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+
+    <h2>Children's privacy</h2>
+    <p>LeagueCast is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us using the information below and we will address it.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time, for example to reflect changes to LeagueCast or applicable law. We will update the "Last updated" date above when we do. Continued use of LeagueCast after an update means you accept the revised policy.</p>
+
+    <h2>Contact</h2>
+    <p>Privacy questions or requests may be sent to <a href="mailto:privacy@peakdownload.com">privacy@peakdownload.com</a>. See also the <a href="/terms-leaguecast.html">LeagueCast Terms of Use</a>.</p>
+
   </div></div></section></main>
-  <footer class="site-footer"><div class="container site-footer__inner"><div><div class="site-footer__brand">Peak Download LLC</div><div class="site-footer__copy">© 2026 Peak Download LLC. All rights reserved.</div></div><nav class="site-footer__links" aria-label="Footer navigation"><a href="/projects/leaguecast/">LeagueCast</a><a href="/projects/gameiq-baseball-softball/">Game IQ</a><a href="/projects/homeops/">HomeOps</a><a href="/privacy.html">Privacy</a><a href="mailto:contact@peakdownload.com">Contact</a></nav></div></footer><script src="/assets/js/main.js"></script>
-</body></html>
+  <footer class="site-footer"><div class="container site-footer__inner"><div><div class="site-footer__brand">Peak Download LLC</div><div class="site-footer__copy">© 2026 Peak Download LLC. All rights reserved.</div></div><nav class="site-footer__links" aria-label="Footer navigation"><a href="/projects/leaguecast/">LeagueCast</a><a href="/projects/gameiq-baseball-softball/">Game IQ</a><a href="/projects/homeops/">HomeOps</a><a href="/privacy.html">Privacy</a><a href="/terms-leaguecast.html">Terms</a><a href="mailto:contact@peakdownload.com">Contact</a></nav></div></footer>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
