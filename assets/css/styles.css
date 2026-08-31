@@ -84,6 +84,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .button--secondary { border-color: var(--line-strong); background: rgba(255,255,255,.045); }
 .button--gameiq { color: #1b1303; background: var(--gameiq); }
 .button--homeops { color: #04170f; background: var(--homeops); }
+.button--disabled { cursor: default; opacity: .68; }
+.button--disabled:hover { transform: none; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px; margin-bottom: 17px;
   color: #9fdfff; font-size: .76rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
