@@ -54,6 +54,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 850;
 }
 .skip-link:focus { transform: none; }
+#get-leaguecast { scroll-margin-top: calc(var(--header) + 24px); }
 .site-header {
   position: sticky; z-index: 50; top: 0; min-height: var(--header);
   border-bottom: 1px solid var(--line); background: rgba(5, 10, 20, 0.84);
