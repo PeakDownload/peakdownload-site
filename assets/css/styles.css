@@ -14,6 +14,7 @@
   --green: #8ff0c5;
   --gameiq: #ffcf67;
   --homeops: #75e6bd;
+  --leaguecast: var(--blue);
   --max: 1180px;
   --header: 76px;
   --radius: 24px;
@@ -85,6 +86,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .button--secondary { border-color: var(--line-strong); background: rgba(255,255,255,.045); }
 .button--gameiq { color: #1b1303; background: var(--gameiq); }
 .button--homeops { color: #04170f; background: var(--homeops); }
+.button--leaguecast { color: #04101c; background: linear-gradient(135deg, #79dcff, #2fb8ff); }
 .button--disabled { cursor: default; opacity: .68; }
 .button--disabled:hover { transform: none; }
 .eyebrow {
@@ -94,6 +96,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .eyebrow::before { content: ""; width: 24px; height: 2px; background: currentColor; }
 .eyebrow--gameiq { color: var(--gameiq); }
 .eyebrow--homeops { color: var(--homeops); }
+.eyebrow--leaguecast { color: var(--leaguecast); }
 .status-pair { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .pill {
   display: inline-flex; min-height: 28px; align-items: center; padding: 0 10px;
@@ -102,6 +105,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .pill--gameiq { color: #ffe3a3; border-color: rgba(255,207,103,.3); background: rgba(255,207,103,.12); }
 .pill--homeops { color: #bff8df; border-color: rgba(117,230,189,.3); background: rgba(117,230,189,.12); }
+.pill--leaguecast { color: #bfe9ff; border-color: rgba(49,184,255,.3); background: rgba(49,184,255,.12); }
 .hero-brand {
   position: relative; min-height: 390px; display: grid; place-items: center; isolation: isolate;
 }
@@ -194,6 +198,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .product-gallery {
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 32px;
 }
+.product-gallery--pair { grid-template-columns: repeat(2, minmax(0,1fr)); max-width: 620px; }
+.section-heading .pill { margin-top: 6px; }
+.section-heading .pill + p { margin-top: 17px; }
 .product-gallery__item {
   overflow: hidden; margin: 0; border: 1px solid var(--line-strong); border-radius: 28px;
   background: var(--panel-strong); box-shadow: var(--shadow);
