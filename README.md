@@ -6,6 +6,7 @@ Dependency-free static website for Peak Download LLC.
 
 - LeagueCast
 - Game IQ: Baseball & Softball
+- Game IQ: Basketball (coming soon)
 - HomeOps
 
 ## Architecture
