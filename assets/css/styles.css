@@ -177,6 +177,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .leaguecast-feature p { max-width: 650px; margin-top: 18px; }
 .page-hero { padding: clamp(52px, 7vw, 84px) 0 48px; }
 .page-hero h1 { max-width: 18ch; }
+.gameiq-hero__grid {
+  display: grid; grid-template-columns: minmax(0,1.15fr) minmax(280px,.65fr);
+  gap: clamp(32px,6vw,76px); align-items: center;
+}
+.gameiq-hero__copy { min-width: 0; }
+.gameiq-hero__visual {
+  width: min(100%, 350px); justify-self: end; overflow: hidden; margin: 0;
+  border: 1px solid var(--line-strong); border-radius: 28px; background: var(--panel-strong);
+  box-shadow: var(--shadow);
+}
+.gameiq-hero__visual--baseball { width: min(100%, 290px); background: #10241d; }
+.gameiq-hero__visual--basketball { background: #082c58; }
+.gameiq-hero__visual img { width: 100%; height: auto; object-fit: contain; }
 .about-brand-mark { display: block; width: min(100%, 168px); height: auto; margin-bottom: 24px; }
 .back-link { display: inline-flex; margin-bottom: 28px; color: var(--muted); font-weight: 760; }
 .product-meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; color: var(--soft); font-size: .9rem; font-weight: 760; }
@@ -204,8 +217,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .marketing-art img { width: 100%; object-fit: contain; }
 .marketing-art--wide { max-width: 900px; margin-inline: auto; }
-.marketing-art--basketball { max-width: none; background: #082c58; }
-.marketing-art--basketball img { aspect-ratio: 2056 / 765; object-position: center; }
 .marketing-art--compact { width: min(260px, 60%); margin-inline: auto; }
 .home-products { padding-top: 20px; }
 .home-product {
@@ -238,6 +249,33 @@ ul { margin: 0; padding: 0; list-style: none; }
 .directory-row__art img { display: block; width: 100%; height: auto; object-fit: contain; }
 .directory-row__art--portrait { width: min(100%, 250px); justify-self: center; }
 .directory-row__art--wide { width: 100%; }
+.gameiq-family { padding: 54px 0; border-bottom: 1px solid var(--line); }
+.gameiq-family__intro {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.85fr);
+  gap: clamp(28px,6vw,72px); align-items: end;
+}
+.gameiq-family__intro h2 { max-width: 16ch; }
+.gameiq-family__intro p { max-width: 520px; justify-self: end; font-size: 1.06rem; }
+.gameiq-family__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 36px; }
+.gameiq-sport-card {
+  display: grid; grid-template-columns: minmax(160px,.62fr) minmax(0,1fr); overflow: hidden;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel);
+  box-shadow: 0 18px 48px rgba(0,0,0,.18);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.gameiq-sport-card:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+.gameiq-sport-card:focus-within { border-color: var(--line-strong); box-shadow: 0 18px 48px rgba(0,0,0,.24), 0 0 0 2px rgba(255,207,103,.18); }
+.gameiq-sport-card__art { display: grid; min-height: 390px; place-items: center; padding: 18px; }
+.gameiq-sport-card--baseball .gameiq-sport-card__art { background: linear-gradient(145deg, rgba(255,207,103,.1), rgba(10,34,27,.96)); }
+.gameiq-sport-card--basketball .gameiq-sport-card__art { background: linear-gradient(145deg, rgba(255,122,26,.13), rgba(8,44,88,.96)); }
+.gameiq-sport-card__art img { width: auto; max-width: 100%; max-height: 354px; object-fit: contain; }
+.gameiq-sport-card__copy { display: flex; min-width: 0; flex-direction: column; padding: 26px; }
+.gameiq-sport-card__copy .card-index { margin-bottom: 12px; color: var(--gameiq); }
+.gameiq-sport-card--basketball .card-index { color: var(--basketball); }
+.gameiq-sport-card__copy h3 { font-size: clamp(1.45rem,2.4vw,2rem); }
+.gameiq-sport-card__copy .pill { align-self: flex-start; margin-top: 14px; }
+.gameiq-sport-card__copy p { margin: 14px 0 24px; }
+.gameiq-sport-card__copy .button { align-self: flex-start; margin-top: auto; }
 .product-gallery {
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 32px;
 }
@@ -284,6 +322,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .directory-row--reverse .directory-row__copy { grid-row: 1; justify-self: start; }
   .directory-row__copy { max-width: 620px; }
   .directory-row__art--portrait { width: min(100%, 270px); }
+  .gameiq-family__grid { grid-template-columns: 1fr; }
+  .gameiq-sport-card { grid-template-columns: minmax(190px,.48fr) minmax(0,1fr); }
   .product-gallery {
     width: 100%; grid-template-columns: none; grid-auto-flow: column;
     grid-auto-columns: minmax(250px, 48vw); gap: 14px; overflow-x: auto;
@@ -301,6 +341,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-toggle { display: inline-flex; }
 }
 
+@media (min-width: 761px) and (max-width: 900px) {
+  .gameiq-hero__visual--baseball { width: min(100%, 240px); }
+}
+
+@media (max-width: 760px) {
+  .gameiq-hero__grid, .gameiq-family__intro { grid-template-columns: 1fr; }
+  .gameiq-hero__visual { width: min(100%, 330px); justify-self: center; }
+  .gameiq-hero__visual--baseball { width: min(100%, 280px); }
+  .gameiq-family__intro p { justify-self: start; }
+}
+
 @media (max-width: 620px) {
   .container { padding-inline: 18px; }
   h1 { font-size: clamp(2.3rem, 10vw, 3.4rem); }
@@ -315,11 +366,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   .directory-row, .directory-row--reverse { gap: 22px; padding: 30px 0; }
   .directory-row__copy h2 { max-width: 17ch; }
   .directory-row__copy .button { margin-top: 20px; }
+  .gameiq-family { padding: 44px 0; }
+  .gameiq-family__grid { margin-top: 28px; }
+  .gameiq-sport-card { grid-template-columns: 1fr; }
+  .gameiq-sport-card__art { min-height: 0; padding: 22px; }
+  .gameiq-sport-card__art img { max-height: 360px; }
+  .gameiq-sport-card__copy { padding: 24px; }
+  .gameiq-sport-card__copy .button { align-self: stretch; }
   .hero-brand { min-height: 320px; }
   .hero-brand__frame { max-width: 290px; padding: 24px; border-radius: 27px; }
   .feature-grid, .role-grid, .detail-grid, .product-grid, .faq-grid, .scenario-grid { grid-template-columns: 1fr; }
   .product-gallery { grid-auto-columns: minmax(250px, 82vw); }
-  .marketing-art--basketball img { aspect-ratio: auto; }
   .product-card { min-height: 260px; padding: 23px; }
   .product-card--featured { grid-column: auto; min-height: 290px; }
   .product-card__top { margin-bottom: 32px; }
